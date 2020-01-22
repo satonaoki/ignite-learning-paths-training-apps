@@ -1,5 +1,7 @@
 # aps30 infra pipeline
-### The following variables should be MANUALLY set as secret variables via the web interface  ### Secret variables are encrypted at rest with a 2048-bit RSA key
+
+### The following variables should be MANUALLY set as secret variables via the web interface
+### Secret variables are encrypted at rest with a 2048-bit RSA key
 
 ### Example values:
 
