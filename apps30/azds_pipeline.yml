@@ -20,7 +20,7 @@ variables:
 
   # resource group
   # resourceGroup: 'igniteapps30'
-  resourceGroup: 'apps30-osaka2'
+  resourceGroup: 'apps30-osaka1'
 
   # location
   # location: 'eastus'
@@ -33,13 +33,13 @@ variables:
   subName: 'nparker-daisuke-nasat'
 
   # cosmos db name
-  cosmosdbName: 'apps30twtnosqlosaka2'
+  cosmosdbName: 'apps30twtnosqlosaka1'
 
   # sql db name
-  sqldbName: 'apps30twtsqlosaka2'
+  sqldbName: 'apps30twtsqlosaka1'
 
   # acr name
-  acrName: 'igniteapps30acrosaka2'
+  acrName: 'apps30acrosaka1'
 
 pool:
   vmImage: 'ubuntu-latest'
