@@ -17,22 +17,24 @@ trigger:
 variables:
 
   # resource group
-  resourceGroup: 'igniteapps30'
-
+  # resourceGroup: 'igniteapps30'
+  resourceGroup: 'apps30'
   # location
-  location: 'eastus'
+  # location: 'eastus'
+  location: 'japaneast'
 
   # subscription name
-  subName: 'Ignite The Tour'
+  # subName: 'Ignite The Tour'
+  subName: 'nparker-daisuke-nasat'
 
   # cosmos db name
-  cosmosdbName: 'apps30twtnosqlge'
+  cosmosdbName: 'apps30twtnosqlneo'
 
   # sql db name
-  sqldbName: 'apps30twtsql'
+  sqldbName: 'apps30twtsqlneo'
 
   # acr name
-  acrName: 'igniteapps30acr'
+  acrName: 'igniteapps30acrneo'
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -42,7 +44,8 @@ steps:
 - task: AzureCLI@2
   displayName: 'Create Resource Group'
   inputs:
-    azureSubscription: 'Ignite the Tour(cd400f31-6f94-40ab-863a-673192a3c0d0)'
+    # azureSubscription: 'Ignite the Tour(cd400f31-6f94-40ab-863a-673192a3c0d0)'
+    azureSubscription: 'nparker-daisuke-nasat(d5610cb7-05c0-46e1-86f9-4e71b355691b)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: 'az group create --subscription "$(subName)" --name $(resourceGroup) --location $(location)'
@@ -51,7 +54,8 @@ steps:
 - task: AzureCLI@2
   displayName: 'Create Virtual Network'
   inputs:
-    azureSubscription: 'Ignite the Tour(cd400f31-6f94-40ab-863a-673192a3c0d0)'
+    # azureSubscription: 'Ignite the Tour(cd400f31-6f94-40ab-863a-673192a3c0d0)'
+    azureSubscription: 'nparker-daisuke-nasat(d5610cb7-05c0-46e1-86f9-4e71b355691b)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: 'az network vnet create --name igniteapps30vnet --subscription  "$(subName)" --resource-group $(resourceGroup)   --subnet-name default'
@@ -60,7 +64,8 @@ steps:
 - task: AzureCLI@2
   displayName: 'Create Cosmos DB'
   inputs:
-    azureSubscription: 'Ignite the Tour(cd400f31-6f94-40ab-863a-673192a3c0d0)'
+    # azureSubscription: 'Ignite the Tour(cd400f31-6f94-40ab-863a-673192a3c0d0)'
+    azureSubscription: 'nparker-daisuke-nasat(d5610cb7-05c0-46e1-86f9-4e71b355691b)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: 'az cosmosdb create --name $(cosmosdbName) --resource-group $(resourceGroup) --kind MongoDB --subscription "$(subName)"'
@@ -69,7 +74,8 @@ steps:
 - task: AzureCLI@2
   displayName: 'Create SQL Instance'
   inputs:
-    azureSubscription: 'Ignite the Tour(cd400f31-6f94-40ab-863a-673192a3c0d0)'
+    # azureSubscription: 'Ignite the Tour(cd400f31-6f94-40ab-863a-673192a3c0d0)'
+    azureSubscription: 'nparker-daisuke-nasat(d5610cb7-05c0-46e1-86f9-4e71b355691b)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
@@ -83,7 +89,8 @@ steps:
 - task: AzureCLI@2
   displayName: 'Create ACR'
   inputs:
-    azureSubscription: 'Ignite the Tour(cd400f31-6f94-40ab-863a-673192a3c0d0)'
+    # azureSubscription: 'Ignite the Tour(cd400f31-6f94-40ab-863a-673192a3c0d0)'
+    azureSubscription: 'nparker-daisuke-nasat(d5610cb7-05c0-46e1-86f9-4e71b355691b)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: 'az acr create --resource-group $(resourceGroup) --name $(acrName) --sku Basic --subscription  "$(subName)" --admin-enabled true'
