@@ -32,13 +32,13 @@ variables:
   subName: 'nparker-daisuke-nasat'
 
   # cosmos db name
-  cosmosdbName: 'apps30twtnosqlea'
+  cosmosdbName: 'apps30twtnosqlosk'
 
   # sql db name
-  sqldbName: 'apps30twtsqlea'
+  sqldbName: 'apps30twtsqlosk'
 
   # acr name
-  acrName: 'igniteapps30acrea'
+  acrName: 'igniteapps30acrosk'
 
 pool:
   vmImage: 'ubuntu-latest'
