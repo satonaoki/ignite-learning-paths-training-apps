@@ -23,7 +23,8 @@ variables:
   resourceGroup: 'apps30'
   # location
   # location: 'eastus'
-  location: 'japaneast'
+  # location: 'japaneast'
+  location: 'eastasia'
 
   # subscription name
   # subName: 'Ignite The Tour'
