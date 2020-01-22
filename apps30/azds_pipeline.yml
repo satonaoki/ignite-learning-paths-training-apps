@@ -20,7 +20,7 @@ variables:
 
   # resource group
   # resourceGroup: 'igniteapps30'
-  resourceGroup: 'apps30ea2'
+  resourceGroup: 'apps30-ea'
 
   # location
   # location: 'eastus'
