@@ -62,7 +62,8 @@ steps:
     azureSubscription: 'nparker-daisuke-nasat(d5610cb7-05c0-46e1-86f9-4e71b355691b)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
-    inlineScript: 'az network vnet create --name igniteapps30vnet --subscription  "$(subName)" --resource-group $(resourceGroup)   --subnet-name default'
+    # inlineScript: 'az network vnet create --name igniteapps30vnet --subscription  "$(subName)" --resource-group $(resourceGroup)   --subnet-name default'
+    inlineScript: 'az network vnet create --name apps30vnet --subscription  "$(subName)" --resource-group $(resourceGroup)   --subnet-name default'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
 
 - task: AzureCLI@2
